@@ -1,0 +1,30 @@
+<div class="container quote-sec-wrapper m-2">
+    <div class="quote-wrapper">
+        <app-quote-details
+        *ngIf="!hideQuoteDetails"
+        [quotes]="quotes"></app-quote-details>
+        <p class="quote">{{ quotes.quote }}</p>
+    </div>
+    <div class="all-btns mt-2">
+        <div class="vote-btns">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-success"
+                (click)="addUpvote()"
+                >Upvote</button>
+                
+                <button type="button" class="btn btn-success">{{ quotes.upvotes }}</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-warning"
+                (click)="addDownvote()">Downvote</button>
+                <button type="button" class="btn btn-warning">{{ quotes.downvotes }}</button>
+            </div>
+        </div>
+        <div class="other-btns text-right">
+            <button type="button" class="btn btn-info"
+            (click)="moreInfo()">{{ hideQuoteDetails ? 'More info':'Less info' }}</button>
+            <button type="button" class="btn btn-danger"
+            (click)="onDelete()">Delete</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.details-sec-wrapper{
+    background: rgba(211, 84, 0, 1);
+    border-radius: 10px;
+    padding: 5px;
+}
+.details-wrapper{
+    background: rgba(242, 120, 75, 1);
+    border-radius: 10px;
+    padding: 5px;
+}
+.author{
+    font-family: 'Righteous', cursive;
+    font-size: calc(112% + 1vh);
+    text-transform: capitalize;
+}
+.submitter{
+    font-family: 'Righteous', cursive;
+    font-size: calc(100% + 0.5vh);
+    text-transform: capitalize;
+}

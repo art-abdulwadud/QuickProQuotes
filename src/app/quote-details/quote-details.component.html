@@ -1,0 +1,10 @@
+<div class="container details-sec-wrapper">
+    <div class="details-wrapper">
+        <h1>Author: <span class="author">{{ quotes.author }}</span></h1>
+        <h1>Submited by: <span class="submitter">{{ quotes.submited_by }}</span></h1>
+        <p>Upvotes: <span class="upvote">{{ quotes.upvotes }}</span></p>
+        <p>Downvotes: <span class="downvotes">{{ quotes.downvotes }}</span></p>
+        <p class="quote">Date Created: {{ quotes.date_created | date }}</p>
+        <p class="duration">{{ quotes.date_created | timelapsePipe}}</p>
+    </div>
+</div>

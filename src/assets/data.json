@@ -1,0 +1,25 @@
+{
+    "quotes": [
+        {
+          "id": 1,
+          "author": "Martin Fowler",
+          "quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+          "upvote": 0,
+          "downvote": 0
+        },
+        {
+          "id": 1,
+          "author": "Oscar Wilde",
+          "quote": "Experience is the name everyone gives to their mistakes.",
+          "upvote": 0,
+          "downvote": 0
+        },
+        {
+          "id": 1,
+          "author": "Dan Salomon",
+          "quote": "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code",
+          "upvote": 0,
+          "downvote": 0
+        }
+    ]
+}

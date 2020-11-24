@@ -1,0 +1,23 @@
+<header>
+    <app-navbar></app-navbar>
+</header>
+<div class="quote-body">
+  <div class="overlay"></div>
+  <div class="all-quotes">
+  </div>
+  <div class="text-sec text-left">
+    <h1 class="intro-heading ml-3 text-white">Programming Quotes</h1>
+    <span class="intro-moto ml-3 text-warning">Stay inspired</span>
+    <div class="mt-3">
+      <app-form></app-form>
+    </div>
+    <div>
+        <app-quote
+        *ngFor="let quote of quotes"
+        (delete)="deleteQuote($event)"
+        (highestUpvote)="highestUpvote($event)"
+        [quotes]="quote"></app-quote>
+    </div>
+  </div>
+    
+</div>
