@@ -1,0 +1,36 @@
+<div class="container form-sec-wrapper">
+    <div class="form-wrapper">
+        <h1 class="intro">Add a new Quote</h1>
+        <p class="success bg-success"
+        *ngIf="hideSuccess == false">Quote Posted Successfully!</p>
+        <div>
+            <button type="button" class="btn btn-primary"
+            (click)="showForm()">{{ hideForm ? 'Add Quote':'Cancel' }}</button>
+        </div>
+        <div 
+        *ngIf="hideForm==false">
+            <form
+            [formGroup]="form"
+            (ngSubmit)="onSubmit(form.value)">
+                <div class="form-group">
+                    <label for="submited-by">Enter your name</label>
+                    <input type="text" name="submited_by" class="form-control" id="submited-by" placeholder="Submited by" formControlName="submited_by">
+                    <p class="text-danger mt-3"
+                    *ngIf="form.get('submited_by').hasError('pattern')">Invalid character</p>
+                </div>
+                <div class="form-group">
+                  <label for="author">Name of the Author</label>
+                  <input type="text" name="author" class="form-control" id="author" placeholder="Author" formControlName="author">
+                  <p class="text-danger mt-3"
+                  *ngIf="form.get('author').hasError('pattern')">Invalid character</p>
+                </div>
+                <div class="form-group">
+                  <label for="quote">Quote</label>
+                  <input type="text" name="quote" class="form-control" id="quote" placeholder="Quote" formControlName="quote">
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary"
+                [disabled]="form.status == 'INVALID'">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
